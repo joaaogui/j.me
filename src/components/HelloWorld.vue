@@ -3,9 +3,15 @@
 <template>
   <h1>Oi!</h1>
   <div>
-    <p>My name is João Guilherme</p>
-    <p>My email is joaaogui@gmail.com</p>
-    <p>I'm a software engineer</p>
+    <p>
+      My name is João Guilherme, I'm a front-end developer based in Brasília,
+      Brasil. I have developed many types of front-ends from sass products to
+      infrstructure managers.
+    </p>
+
+    <a>projetos</a>
+    <a href="https://github.com/joaaogui/j.me/"></a>
+    <a href="mailto:joaaogui@gmail.com">e-mail</a>
   </div>
   <div>
     <a href="https://www.linkedin.com/in/joaaogui/">Linkedin</a>
