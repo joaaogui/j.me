@@ -1,41 +1,19 @@
-<script setup>
-import { ref } from "vue";
-
-defineProps({
-  msg: String,
-});
-
-const count = ref(0);
-</script>
+<script setup></script>
 
 <template>
-  <h1 class="text-red-500">{{ msg }}</h1>
-
-  <div class="text-7xl card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+  <h1>Oi!</h1>
+  <div>
+    <p>My name is João Guilherme</p>
+    <p>My email is joaaogui@gmail.com</p>
+    <p>I'm a software engineer</p>
   </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  <div>
+    <a href="https://www.linkedin.com/in/joaaogui/">Linkedin</a>
+    <a href="https://github.com/joaaogui/">Github</a>
+    <a href="/youtube">Youtube</a>
+    <a href="/spotify">Spotify</a>
+    <a href="/imdb">Imdb</a>
+  </div>
 </template>
 
-<style scoped>
-.read-the-docs {
-  color: #888;
-  @apply text-red-500;
-}
-</style>
+<style scoped></style>
