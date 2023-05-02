@@ -6,11 +6,11 @@
       <h1 class="home__header__title">Oi!</h1>
       <span class="home__header__description">
         <p>
-          Greetings! I am João Guilherme, a talented front-end developer
-          currently based in Brasília, Brasil. With over 5 years of experience
-          in frontend development, and 3 years working as a growth engineer, I
-          have developed a keen eye for designing and developing intuitive,
-          visually appealing user interfaces.
+          I am João Guilherme, a front-end developer currently based in
+          Brasília, Brasil. With over 5 years of experience in frontend
+          development, and 3 years working as a growth engineer, I have
+          developed a keen eye for designing and developing intuitive, visually
+          appealing user interfaces.
         </p>
         <p>
           I pride myself on taking a collaborative approach to development,
