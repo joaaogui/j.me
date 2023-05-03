@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.0.0",
+    "mixpanel-browser": "^2.47.0",
     "vue": "^3.2.47"
   },
   "devDependencies": {

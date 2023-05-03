@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import mixpanel from "mixpanel-browser";
+
 export default {
   data() {
     return {
@@ -36,7 +38,10 @@ export default {
     };
   },
   methods: {
-    redirect(url) {
+    async redirect(url) {
+      mixpanel.init("47d6cdcf042589196d3375de159e966d", { debug: true });
+      mixpanel.identify((Math.random() + 1).toString(36).substring(7));
+      await mixpanel.track("redirect to site - bar", { url });
       window.location.href = url;
     },
   },

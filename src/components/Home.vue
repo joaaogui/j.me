@@ -43,6 +43,8 @@
 </template>
 
 <script>
+import mixpanel from "mixpanel-browser";
+
 export default {
   data() {
     return {
@@ -68,8 +70,14 @@ export default {
   },
   methods: {
     redirect(url) {
+      mixpanel.init("47d6cdcf042589196d3375de159e966d", { debug: true });
+      mixpanel.identify((Math.random() + 1).toString(36).substring(7));
+      mixpanel.track("redirect to site - home", { url });
       window.location.href = url;
     },
+  },
+  mounted() {
+    mixpanel.track("Home pageview", {});
   },
 };
 </script>
