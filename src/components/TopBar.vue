@@ -2,17 +2,24 @@
 
 <template>
   <div class="top-bar">
-    <img
+    <span
       v-for="image in images"
-      class="top-bar__image"
-      @click="redirect(image.url)"
-      :src="image.logo"
-    />
+      @mouseover="image.showTooltip = true"
+      @mouseleave="image.showTooltip = false"
+    >
+      <img
+        class="top-bar__image"
+        @click="redirect(image.url)"
+        :src="image.logo"
+      />
+      <Tooltip v-if="image.showTooltip" :text="image.logo" />
+    </span>
   </div>
 </template>
 
 <script>
 import mixpanel from "mixpanel-browser";
+import Tooltip from "./Tooltip.vue";
 
 export default {
   data() {
@@ -21,18 +28,22 @@ export default {
         {
           url: "https://www.linkedin.com/in/joaaogui/",
           logo: "images/linkedin.png",
+          showTooltip: false,
         },
         {
           url: "https://www.linkedin.com/in/joaaogui/",
           logo: "images/github.png",
+          showTooltip: false,
         },
         {
           url: "mailto:joaaogui@gmail.com",
           logo: "images/mail-black.png",
+          showTooltip: false,
         },
         {
           url: "https://github.com/joaaogui/j.me/",
           logo: "images/source-code.png",
+          showTooltip: false,
         },
       ],
     };
@@ -45,14 +56,15 @@ export default {
       window.location.href = url;
     },
   },
+  components: { Tooltip },
 };
 </script>
 
 <style scoped lang="scss">
 .top-bar {
-  @apply w-full flex flex-row justify-start max-h-10 py-1 ml-6;
+  @apply w-full flex flex-row justify-end max-h-9 py-1;
   &__image {
-    @apply cursor-pointer object-contain  w-16 hover:opacity-60;
+    @apply cursor-pointer object-contain w-14 hover:opacity-60;
   }
 }
 </style>
