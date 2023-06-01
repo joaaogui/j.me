@@ -78,7 +78,7 @@ export default {
           techs: ["Vue.JS", "Typescript", "HTML", "TailwindCSS"],
           title: "Youtube Data",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet tortor eget dolor suscipit mattis. Nunc ex mauris, mollis non dolor nec, varius aliquet risus. Etiam hendrerit interdum erat, at tempor",
+            "Lorem ipsum dolor sit amet, mollis non dolor nec, varius aliquet risus. Etiam hendrerit interdum erat, at tempor",
         },
         {
           showInfo: false,
@@ -88,7 +88,7 @@ export default {
 
           title: "Spotify Popularity",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet tortor eget dolor suscipit",
+            "Lorem ipsum dolor sit amet, Ut imperdiet tortor eget dolor suscipit",
         },
         {
           showInfo: false,
@@ -141,14 +141,14 @@ export default {
   &__projects {
     @apply flex flex-col text-left;
     &__title {
-      @apply font-bold text-left text-xl;
+      @apply font-bold text-left text-2xl mb-4;
     }
     &__logos {
-      @apply flex flex-row flex-wrap self-center justify-center gap-2;
+      @apply flex flex-row flex-wrap self-center justify-between gap-2;
       &__item {
         @apply flex flex-col justify-center items-center px-4 py-2;
         @apply object-contain bg-gray-100 rounded-lg cursor-pointer;
-        @apply hover:bg-gradient-to-t from-gray-500 via-gray-400 to-white transition duration-300 ease-in-out;
+        @apply hover:bg-gradient-to-t from-gray-300 via-gray-200 to-white transition duration-300 ease-in-out;
         @apply w-80 h-96;
         &:hover {
           font-weight: bold;
@@ -160,18 +160,18 @@ export default {
           @apply max-w-36;
         }
         &__texts {
-          @apply flex flex-col opacity-0 text-white mt-4;
+          @apply flex flex-col opacity-0 text-gray-600 mt-4;
 
           &__title {
-            @apply font-extrabold text-3xl;
+            @apply font-extrabold text-3xl mb-4;
           }
           &__description {
-            @apply text-sm;
+            @apply text-sm mb-4;
           }
           &__techs {
-            @apply flex flex-row gap-2 flex-wrap text-sm mt-2;
+            @apply flex flex-row text-sm;
             &__item {
-              @apply p-1 bg-white text-gray-500 rounded-full m-auto flex flex-row;
+              @apply p-1 px-2 bg-white  text-gray-500 rounded-full m-auto flex flex-row;
             }
           }
         }

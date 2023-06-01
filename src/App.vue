@@ -4,10 +4,14 @@ import TopBar from "./components/TopBar.vue";
 </script>
 
 <template>
-  <div class="font-raleway text-gray-dark">
+  <div class="app">
     <TopBar />
     <Home />
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.app {
+  @apply font-raleway text-gray-800 flex flex-col justify-center items-center;
+}
+</style>

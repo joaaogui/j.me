@@ -2,17 +2,22 @@
 
 <template>
   <div class="top-bar">
-    <span
-      v-for="image in images"
-      @mouseover="image.showTooltip = true"
-      @mouseleave="image.showTooltip = false"
-    >
-      <img
-        class="top-bar__image"
-        @click="redirect(image.url)"
-        :src="image.logo"
-      />
-      <Tooltip v-if="image.showTooltip" :text="image.logo" />
+    <span class="top-bar__logo">
+      <img class="top-bar__logo" src="images/logo.png" />
+    </span>
+    <span class="top-bar__links">
+      <span
+        v-for="image in images"
+        @mouseover="image.showTooltip = true"
+        @mouseleave="image.showTooltip = false"
+      >
+        <img
+          class="top-bar__links__image"
+          @click="redirect(image.url)"
+          :src="image.logo"
+        />
+        <Tooltip v-if="image.showTooltip" :text="image.logo" />
+      </span>
     </span>
   </div>
 </template>
@@ -62,9 +67,16 @@ export default {
 
 <style scoped lang="scss">
 .top-bar {
-  @apply w-full flex flex-row justify-end max-h-9 py-1;
-  &__image {
-    @apply cursor-pointer object-contain w-14 hover:opacity-60;
+  @apply w-full flex flex-row justify-around max-h-9 gap-6 mt-10 mr-10;
+  &__logo {
+    @apply w-16  object-contain;
+  }
+
+  &__links {
+    @apply flex gap-6;
+    &__image {
+      @apply cursor-pointer object-contain w-10  hover:opacity-60;
+    }
   }
 }
 </style>
