@@ -3,7 +3,7 @@
 <template>
   <div class="top-bar">
     <span class="top-bar__logo">
-      <img class="top-bar__logo" src="images/logo.png" />
+      <img class="top-bar__logo" src="/images/logo.png" />
     </span>
     <span class="top-bar__links">
       <span
