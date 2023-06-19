@@ -32,17 +32,20 @@
     <div class="home__projects">
       <a class="home__projects__title">Projects</a>
       <span class="home__projects__logos">
-        <spa
+        <span
           v-for="image in images"
           class="home__projects__logos__item"
           @click="redirect(image.url)"
           @mouseover="image.showInfo = true"
           @mouseleave="image.showInfo = false"
         >
-          <img class="home__projects__logos__item__img" :src="image.logo" />
+          <div class="home__projects__logos__item__img">
+            <img :src="image.logo" />
+          </div>
+
           <span
             v-if="image.showInfo"
-            class="home__projects__logos__item__texts"
+            class="home__projects__logos__item__texts animate fade"
           >
             <span class="home__projects__logos__item__texts__title">{{
               image.title
@@ -58,7 +61,7 @@
               >
             </span>
           </span>
-        </spa>
+        </span>
       </span>
     </div>
   </div>
@@ -72,13 +75,12 @@ export default {
     return {
       images: [
         {
-          showInfo: false,
+          showInfo: true,
           url: "https://youtube.joaog.com",
-          logo: "images/youtube_short.svg",
+          logo: "images/youtube.png",
           techs: ["Vue.JS", "Typescript", "HTML", "TailwindCSS"],
           title: "Youtube Data",
-          description:
-            "Lorem ipsum dolor sit amet, mollis non dolor nec, varius aliquet risus. Etiam hendrerit interdum erat, at tempor",
+          description: "Find the most popular video of a Youtube channel",
         },
         {
           showInfo: false,
@@ -88,7 +90,7 @@ export default {
 
           title: "Spotify Popularity",
           description:
-            "Lorem ipsum dolor sit amet, Ut imperdiet tortor eget dolor suscipit",
+            "Discover the list of most popular songs of an Spotify artist",
         },
         {
           showInfo: false,
@@ -98,17 +100,17 @@ export default {
 
           title: "IMDB Best Season",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet tortor eget dolor suscipit",
+            "Find out what's the best season of a show, based on IMDb scores",
         },
         {
           showInfo: false,
           url: "https://github.joaog.com",
-          logo: "images/github-text.png",
+          logo: "images/github.png",
           techs: ["Vue.JS", "Typescript", "HTML", "TailwindCSS"],
 
           title: "Github Discovery",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet tortor eget dolor suscipit",
+            "Example platform for showcase. Gets info from the github api, and display it for a logged user",
         },
       ],
     };
@@ -140,36 +142,37 @@ export default {
 
   &__projects {
     @apply flex flex-col text-left;
+
     &__title {
-      @apply font-bold text-left text-2xl mb-4;
+      @apply font-bold text-left text-2xl mb-6;
     }
     &__logos {
       @apply flex flex-row flex-wrap self-center justify-between gap-2;
       &__item {
-        @apply flex flex-col justify-center items-center px-4 py-2;
-        @apply object-contain bg-gray-100 rounded-lg cursor-pointer;
-        @apply hover:bg-gradient-to-t from-gray-300 via-gray-200 to-white transition duration-300 ease-in-out;
-        @apply w-80 h-96;
+        @apply flex flex-col items-center px-6 py-2 relative;
+        @apply object-contain bg-blueGray-100  rounded-xl cursor-pointer;
+        @apply transition duration-300 ease-in-out;
+        @apply w-full h-80 md:w-80;
         &:hover {
-          font-weight: bold;
           & .home__projects__logos__item__texts {
             @apply opacity-100;
           }
         }
         &__img {
-          @apply max-w-36;
+          @apply mt-10;
         }
         &__texts {
-          @apply flex flex-col opacity-0 text-gray-600 mt-4;
+          @apply flex flex-col w-11/12 opacity-100 text-gray-500;
+          @apply absolute bottom-3;
 
           &__title {
-            @apply font-extrabold text-3xl mb-4;
+            @apply font-extrabold text-2xl mb-4;
           }
           &__description {
             @apply text-sm mb-4;
           }
           &__techs {
-            @apply flex flex-row text-sm;
+            @apply flex flex-row text-xs gap-1;
             &__item {
               @apply p-1 px-2 bg-white  text-gray-500 rounded-full m-auto flex flex-row;
             }
@@ -177,6 +180,27 @@ export default {
         }
       }
     }
+  }
+}
+.animate {
+  animation-duration: 50ms;
+  animation-duration: 300ms;
+  animation-delay: 50ms;
+  animation-name: animate-fade;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+  animation-fill-mode: backwards;
+}
+
+.animate.fade {
+  animation-name: animate-fade;
+  animation-timing-function: ease;
+}
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 </style>

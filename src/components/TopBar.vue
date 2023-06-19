@@ -10,13 +10,14 @@
         v-for="image in images"
         @mouseover="image.showTooltip = true"
         @mouseleave="image.showTooltip = false"
+        class="relative"
       >
         <img
           class="top-bar__links__image"
           @click="redirect(image.url)"
           :src="image.logo"
         />
-        <Tooltip v-if="image.showTooltip" :text="image.logo" />
+        <Tooltip v-if="image.showTooltip" :text="image.description" />
       </span>
     </span>
   </div>
@@ -34,21 +35,25 @@ export default {
           url: "https://www.linkedin.com/in/joaaogui/",
           logo: "images/linkedin.png",
           showTooltip: false,
+          description: "Check my LinkedIn",
         },
         {
-          url: "https://www.linkedin.com/in/joaaogui/",
+          url: "https://github.com/joaaogui",
           logo: "images/github.png",
           showTooltip: false,
+          description: "Take a look at my github repositories",
         },
         {
           url: "mailto:joaaogui@gmail.com",
           logo: "images/mail-black.png",
           showTooltip: false,
+          description: "Get in touch with me",
         },
         {
           url: "https://github.com/joaaogui/j.me/",
           logo: "images/source-code.png",
           showTooltip: false,
+          description: "Check the source code for this site",
         },
       ],
     };
@@ -67,15 +72,15 @@ export default {
 
 <style scoped lang="scss">
 .top-bar {
-  @apply w-full flex flex-row justify-around max-h-9 gap-6 mt-10 mr-10;
+  @apply w-full flex flex-row justify-around items-center gap-6 mt-6 mb-10;
   &__logo {
-    @apply w-16  object-contain;
+    @apply w-16 object-contain;
   }
 
   &__links {
-    @apply flex gap-6;
+    @apply flex gap-6 relative;
     &__image {
-      @apply cursor-pointer object-contain w-10  hover:opacity-60;
+      @apply cursor-pointer object-contain w-10 hover:opacity-60;
     }
   }
 }
