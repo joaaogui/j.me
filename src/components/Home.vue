@@ -133,7 +133,7 @@ export default {
   @apply m-10 items-center flex flex-col gap-x-6 max-w-2xl justify-center;
   &__header {
     &__title {
-      @apply text-4xl mb-4;
+      @apply text-4xl mb-4 text-gray-500;
     }
     &__description {
       @apply flex flex-col gap-y-2 mb-10;
@@ -144,7 +144,7 @@ export default {
     @apply flex flex-col text-left;
 
     &__title {
-      @apply font-bold text-left text-2xl mb-6;
+      @apply font-bold text-left text-2xl mb-6 text-gray-500;
     }
     &__logos {
       @apply flex flex-row flex-wrap self-center justify-between gap-2;
@@ -166,7 +166,7 @@ export default {
           @apply absolute bottom-3;
 
           &__title {
-            @apply font-extrabold text-2xl mb-4;
+            @apply font-bold text-gray-500 text-2xl mb-4;
           }
           &__description {
             @apply text-sm mb-4;

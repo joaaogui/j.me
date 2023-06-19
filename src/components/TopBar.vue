@@ -72,7 +72,7 @@ export default {
 
 <style scoped lang="scss">
 .top-bar {
-  @apply w-full flex flex-row justify-around items-center gap-6 mt-6 mb-10;
+  @apply w-full flex flex-row justify-around items-center gap-6 mt-6 mb-8;
   &__logo {
     @apply w-16 object-contain;
   }
