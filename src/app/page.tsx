@@ -17,15 +17,16 @@ export default function Home() {
               <Hero />
               <About />
               <Experience />
-              <Footer />
             </div>
             
             {/* Right Column - Projects (prominent) */}
-            <div className="order-1 lg:order-2">
+            <div className=" order-2">
               <Projects />
             </div>
           </div>
         </div>
+        <Footer />
+
       </main>
       <Analytics />
     </>
