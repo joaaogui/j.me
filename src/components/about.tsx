@@ -11,10 +11,11 @@ export function About() {
       transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
     >
       <p className="text-muted leading-relaxed">
-      <span className="text-foreground">7+ years</span> of building high-performance platforms.
-      
-        Focused on analytics-driven development and polished user experiences.
+        <span className="text-foreground">Software engineer at Nubank</span>,
+        building the small public tools on this site alongside the platforms
+        at work. Previously staff engineer at deX Labs.
       </p>
     </motion.section>
   )
 }
+

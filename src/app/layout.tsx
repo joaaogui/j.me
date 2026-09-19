@@ -13,14 +13,25 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'João Guilherme | Software Engineer',
-  description: 'Software Engineer specializing in React, TypeScript, and Frontend Architecture. Currently at Nubank.',
-  keywords: ['Software Engineer', 'Frontend', 'React', 'TypeScript', 'Next.js'],
-  authors: [{ name: 'João Guilherme' }],
+  metadataBase: new URL("https://joaog.space"),
+  title: "João Guilherme | Software Engineer",
+  description:
+    "Software engineer at Nubank. Personal tools for Clash Royale, Brawl Stars, music, and TV live on joaog.space.",
+  keywords: ["Software Engineer", "Nubank", "Next.js", "TypeScript", "João Guilherme"],
+  authors: [{ name: "João Guilherme", url: "https://joaog.space" }],
+  alternates: { canonical: "/" },
   openGraph: {
-    title: 'João Guilherme | Software Engineer',
-    description: 'Software Engineer specializing in React, TypeScript, and Frontend Architecture.',
-    type: 'website',
+    title: "João Guilherme | Software Engineer",
+    description:
+      "Personal tools for games, music, and TV, plus the work behind them.",
+    url: "https://joaog.space",
+    siteName: "joaog.space",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "João Guilherme | Software Engineer",
+    description: "Personal tools for games, music, and TV.",
   },
 }
 
