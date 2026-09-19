@@ -1,8 +1,8 @@
 "use client"
 
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { motion } from "framer-motion"
 import { Github, Linkedin, Mail } from "lucide-react"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
 const socialLinks = [
   {
@@ -24,23 +24,23 @@ const socialLinks = [
 
 export function Hero() {
   return (
-    <motion.section 
+    <motion.section
       className="mb-8"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <h1 
+      <h1
         className="text-3xl md:text-4xl font-serif tracking-tight mb-2"
         style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
       >
         João Guilherme
       </h1>
-      
+
       <p className="text-muted mb-4">
-        Software Engineer at <span className="text-foreground font-medium">Nubank</span>
+        Senior Software Engineer at <span className="text-foreground font-medium">Nubank</span>
       </p>
-      
+
       <div className="flex gap-1">
         <TooltipProvider delayDuration={0}>
           {socialLinks.map((link) => (
@@ -66,3 +66,4 @@ export function Hero() {
     </motion.section>
   )
 }
+

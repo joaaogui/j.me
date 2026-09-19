@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://joaog.space"),
   title: "João Guilherme | Software Engineer",
   description:
-    "Software engineer at Nubank. Personal tools for Clash Royale, Brawl Stars, music, and TV live on joaog.space.",
+    "Senior software engineer at Nubank. Personal tools for Clash Royale, Brawl Stars, music, and TV live on joaog.space.",
   keywords: ["Software Engineer", "Nubank", "Next.js", "TypeScript", "João Guilherme"],
   authors: [{ name: "João Guilherme", url: "https://joaog.space" }],
   alternates: { canonical: "/" },

@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 const experiences = [
   {
     company: "Nubank",
-    role: "Software Engineer",
+    role: "Senior Software Engineer",
     period: "2025 – Present",
   },
   {
@@ -22,7 +22,7 @@ const experiences = [
 
 export function Experience() {
   return (
-    <motion.section 
+    <motion.section
       className="mb-10"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
@@ -31,11 +31,11 @@ export function Experience() {
       <h2 className="text-xs font-medium uppercase tracking-wider text-muted mb-4">
         Experience
       </h2>
-      
+
       <div className="space-y-2">
         {experiences.map((exp) => (
-          <div 
-            key={exp.company} 
+          <div
+            key={exp.company}
             className="flex items-baseline justify-between text-sm"
           >
             <span>
@@ -49,3 +49,4 @@ export function Experience() {
     </motion.section>
   )
 }
+
