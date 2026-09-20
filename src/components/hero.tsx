@@ -78,7 +78,7 @@ export function Hero() {
                   href={link.href}
                   target={link.href.startsWith("mailto") ? undefined : "_blank"}
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg text-muted hover:text-foreground hover:bg-border-light transition-all duration-200"
+                  className="flex h-12 w-12 items-center justify-center rounded-lg text-muted hover:text-foreground hover:bg-border-light transition-all duration-200"
                   aria-label={link.name}
                 >
                   <link.icon className="w-4 h-4" />

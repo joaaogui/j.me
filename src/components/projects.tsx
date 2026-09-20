@@ -2,51 +2,7 @@
 
 import { motion } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
-
-const projects = [
-  {
-    title: "Clash Deck Advisor",
-    description: "A collection-aware Clash Royale coach. It keeps a deck's archetype and only recommends swaps the account can actually play.",
-    url: "https://clash.joaog.space",
-    host: "clash.joaog.space",
-  },
-  {
-    title: "Brawl Account Coach",
-    description: "Account analysis for Brawl Stars: what to upgrade, where trophies are stuck, and which brawlers are worth pushing.",
-    url: "https://brawl.joaog.space",
-    host: "brawl.joaog.space",
-  },
-  {
-    title: "Listening Habits",
-    description: "A decade of Last.fm scrobbles, read for obsessions, discovery, and how taste changes over time.",
-    url: "https://lastfm.joaog.space",
-    host: "lastfm.joaog.space",
-  },
-  {
-    title: "Verity",
-    description: "Document checks that return a verdict in seconds instead of a pile of manual review.",
-    url: "https://verity.joaog.space",
-    host: "verity.joaog.space",
-  },
-  {
-    title: "YouTube Analyzer",
-    description: "Channel and video performance, ranked by what actually got watched rather than by upload date.",
-    url: "https://youtube.joaog.space",
-    host: "youtube.joaog.space",
-  },
-  {
-    title: "Spotify Popularity",
-    description: "Search an artist and see which tracks are carrying them right now.",
-    url: "https://spotify.joaog.space",
-    host: "spotify.joaog.space",
-  },
-  {
-    title: "IMDb Best Season",
-    description: "Episode ratings rolled up so the best season of a show is obvious.",
-    url: "https://imdb.joaog.space",
-    host: "imdb.joaog.space",
-  },
-]
+import { projects } from "@/data/projects"
 
 export function Projects() {
   return (
@@ -83,6 +39,7 @@ export function Projects() {
                 </h3>
                 <p className="mt-1 text-xs font-medium text-accent/80">
                   {project.host}
+                  <span className="text-muted"> · {project.kind}</span>
                 </p>
               </div>
               <ArrowUpRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-muted group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
